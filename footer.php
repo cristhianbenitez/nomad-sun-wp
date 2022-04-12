@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the footer
  *
@@ -9,7 +8,6 @@
  *
  * @package nomad-sun
  */
-
 ?>
 
 <footer id="colophon" class="site-footer">
