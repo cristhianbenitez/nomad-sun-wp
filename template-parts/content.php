@@ -11,38 +11,32 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-
-	<section class="hero" style="background-image: url(
-			<?php if (get_field('hero_image')) : the_field('hero_image');
-			endif;  ?>);">
-
-		<div class="hero__content ">
-			<h1 class="hero__head"><?php the_title() ?></h1>
-			<?php if (get_field('subhead')) : ?>
-				<p class="hero__subhead">
-					<?php the_field('subhead'); ?>
-				</p>
-			<?php endif; ?>
-			<?php if (get_field('date')) : ?>
-				<p class="hero__date">
-					<?php echo date("F Y", strtotime(get_field('date')));  ?>
-				</p>
-			<?php endif; ?>
-		</div>
-	</section>
-
-
-
-
-
-	<header class="entry-header">
-
-	</header><!-- .entry-header -->
-
-
 	<div class="entry-content">
+		<?php if (have_rows('content')) : while (have_rows('content')) : the_row();
+				if (get_row_layout() == 'header') : ?>
 
+					<div class="flex">
+						<div class="w-3/5 min-h-screen bg-blue-600 bg-cover bg-left" style="background-image: url(
+								<?php if (get_field('hero_image')) :
+									echo the_field('hero_image');
+								endif;  ?>);"></div>
+						<div></div>
+					</div>
+
+
+					<?php the_field('date'); ?>
+
+					<?php the_title(); ?>
+					<?php the_field('subhead'); ?>
+
+					<?php the_sub_field('header_intro'); ?>
+
+
+				<?php elseif (get_row_layout() == 'text_block') : ?>
+					<?php the_sub_field('text_content'); ?>
+		<?php endif;
+			endwhile;
+		endif; ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

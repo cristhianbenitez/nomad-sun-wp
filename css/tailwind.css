@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
+@layer base {
+  html {
+    @apply font-tenor;
+  }
+
+  h1 {
+    @apply font-archivo;
+  }
 }

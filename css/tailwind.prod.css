@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
-*//*
+*/
+
+/*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
@@ -340,6 +345,7 @@ button,
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
+
 :disabled {
   cursor: default;
 }
@@ -380,7 +386,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-*, ::before, ::after {
+html{
+  font-family: Tenor Sans, sans-serif;
+}
+
+h1{
+  font-family: Archivo Black, sans-serif;
+}
+
+*, ::before, ::after{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -424,105 +438,197 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-.container {
+.container{
   width: 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 640px){
 
-  .container {
+  .container{
     max-width: 640px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px){
 
-  .container {
+  .container{
     max-width: 768px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px){
 
-  .container {
+  .container{
     max-width: 1024px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px){
 
-  .container {
+  .container{
     max-width: 1280px;
   }
 }
-@media (min-width: 1536px) {
+@media (min-width: 1536px){
 
-  .container {
+  .container{
     max-width: 1536px;
   }
 }
-.visible {
+.visible{
   visibility: visible;
 }
-.invisible {
+.invisible{
   visibility: hidden;
 }
-.static {
+.static{
   position: static;
 }
-.fixed {
+.fixed{
   position: fixed;
 }
-.absolute {
+.absolute{
   position: absolute;
 }
-.relative {
+.relative{
   position: relative;
 }
-.block {
+.mb-\[10px\]{
+  margin-bottom: 10px;
+}
+.mb-44{
+  margin-bottom: 11rem;
+}
+.block{
   display: block;
 }
-.inline {
+.inline{
   display: inline;
 }
-.table {
+.flex{
+  display: flex;
+}
+.table{
   display: table;
 }
-.grid {
+.grid{
   display: grid;
 }
-.contents {
+.contents{
   display: contents;
 }
-.hidden {
+.hidden{
   display: none;
 }
-.grow {
+.h-screen{
+  height: 100vh;
+}
+.min-h-screen{
+  min-height: 100vh;
+}
+.w-3\/5{
+  width: 60%;
+}
+.max-w-\[752px\]{
+  max-width: 752px;
+}
+.grow{
   flex-grow: 1;
 }
-.transform {
+.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
-.truncate {
+.flex-col{
+  flex-direction: column;
+}
+.items-center{
+  align-items: center;
+}
+.justify-center{
+  justify-content: center;
+}
+.truncate{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.rounded {
+.rounded{
   border-radius: 0.25rem;
 }
-.border {
+.border{
   border-width: 1px;
 }
-.uppercase {
+.bg-blue-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+.bg-cover{
+  background-size: cover;
+}
+.bg-center{
+  background-position: center;
+}
+.text-center{
+  text-align: center;
+}
+.font-archivo{
+  font-family: Archivo Black, sans-serif;
+}
+.text-6xl{
+  font-size: 4rem;
+}
+.text-tiny{
+  font-size: .875rem;
+}
+.uppercase{
   text-transform: uppercase;
 }
-.lowercase {
+.lowercase{
   text-transform: lowercase;
 }
-.underline {
+.tracking-widest{
+  letter-spacing: 0.1em;
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.underline{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-.filter {
+.filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-body {
+.before\:absolute::before{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:right-2\/4::before{
+  content: var(--tw-content);
+  right: 50%;
+}
+
+.before\:-top-8::before{
+  content: var(--tw-content);
+  top: -2rem;
+}
+
+.before\:w-10::before{
+  content: var(--tw-content);
+  width: 2.5rem;
+}
+
+.before\:translate-x-1\/2::before{
+  content: var(--tw-content);
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.before\:border-t::before{
+  content: var(--tw-content);
+  border-top-width: 1px;
+}
+
+.before\:content-\[\'\'\]::before{
+  --tw-content: '';
+  content: var(--tw-content);
 }
