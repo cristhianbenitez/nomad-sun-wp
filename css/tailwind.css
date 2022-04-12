@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +11,16 @@
     @apply font-tenor;
   }
 
-  h1 {
-    @apply font-archivo;
+  h1,
+  h3 {
+    @apply font-archivo uppercase;
   }
+
+  p {
+    @apply font-cardo mb-6 text-xl;
+  }
+}
+
+.custom-header > h3 {
+  @apply text-xl mb-6;
 }

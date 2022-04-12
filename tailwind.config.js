@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         tenor: ['Tenor Sans', 'sans-serif'],
-        archivo: ['Archivo Black', 'sans-serif']
+        archivo: ['Archivo Black', 'sans-serif'],
+        cardo: ['Cardo', 'sans-serif']
       },
       fontSize: {
         xs: '.75rem',

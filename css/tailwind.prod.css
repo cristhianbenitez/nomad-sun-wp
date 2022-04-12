@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -390,8 +391,15 @@ html{
   font-family: Tenor Sans, sans-serif;
 }
 
-h1{
+h1, h3{
   font-family: Archivo Black, sans-serif;
+  text-transform: uppercase;
+}
+
+p{
+  margin-bottom: 1.5rem;
+  font-family: Cardo, sans-serif;
+  font-size: 1.25rem;
 }
 
 *, ::before, ::after{
@@ -489,11 +497,28 @@ h1{
 .relative{
   position: relative;
 }
+.m-auto{
+  margin: auto;
+}
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
 .mb-\[10px\]{
   margin-bottom: 10px;
 }
 .mb-44{
   margin-bottom: 11rem;
+}
+.mt-16{
+  margin-top: 4rem;
+}
+.mb-16{
+  margin-bottom: 4rem;
 }
 .block{
   display: block;
@@ -522,11 +547,20 @@ h1{
 .min-h-screen{
   min-height: 100vh;
 }
-.w-3\/5{
-  width: 60%;
+.w-\[57\%\]{
+  width: 57%;
+}
+.w-\[43\%\]{
+  width: 43%;
 }
 .max-w-\[752px\]{
   max-width: 752px;
+}
+.max-w-\[487px\]{
+  max-width: 487px;
+}
+.max-w-\[639px\]{
+  max-width: 639px;
 }
 .grow{
   flex-grow: 1;
@@ -564,11 +598,18 @@ h1{
 .bg-center{
   background-position: center;
 }
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
 .text-center{
   text-align: center;
 }
 .font-archivo{
   font-family: Archivo Black, sans-serif;
+}
+.font-cardo{
+  font-family: Cardo, sans-serif;
 }
 .text-6xl{
   font-size: 4rem;
@@ -576,11 +617,20 @@ h1{
 .text-tiny{
   font-size: .875rem;
 }
+.text-5xl{
+  font-size: 3rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+}
 .uppercase{
   text-transform: uppercase;
 }
 .lowercase{
   text-transform: lowercase;
+}
+.italic{
+  font-style: italic;
 }
 .tracking-widest{
   letter-spacing: 0.1em;
@@ -595,6 +645,11 @@ h1{
 }
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.custom-header > h3{
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .before\:absolute::before{
@@ -612,6 +667,11 @@ h1{
   top: -2rem;
 }
 
+.before\:top-10::before{
+  content: var(--tw-content);
+  top: 2.5rem;
+}
+
 .before\:w-10::before{
   content: var(--tw-content);
   width: 2.5rem;
@@ -626,6 +686,12 @@ h1{
 .before\:border-t::before{
   content: var(--tw-content);
   border-top-width: 1px;
+}
+
+.before\:border-black::before{
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .before\:content-\[\'\'\]::before{
