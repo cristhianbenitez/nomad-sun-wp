@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -504,17 +505,13 @@ p{
   margin-left: auto;
   margin-right: auto;
 }
-.my-20{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-.mx-1{
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
+}
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .mb-\[10px\]{
   margin-bottom: 10px;
@@ -528,14 +525,14 @@ p{
 .mt-16{
   margin-top: 4rem;
 }
-.mb-16{
-  margin-bottom: 4rem;
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+.mt-6{
+  margin-top: 1.5rem;
 }
 .block{
   display: block;
-}
-.inline-block{
-  display: inline-block;
 }
 .inline{
   display: inline;
@@ -545,6 +542,9 @@ p{
 }
 .table{
   display: table;
+}
+.table-caption{
+  display: table-caption;
 }
 .grid{
   display: grid;
@@ -564,11 +564,8 @@ p{
 .w-full{
   width: 100%;
 }
-.w-\[43\%\]{
-  width: 43%;
-}
-.min-w-full{
-  min-width: 100%;
+.w-\[346px\]{
+  width: 346px;
 }
 .max-w-\[752px\]{
   max-width: 752px;
@@ -576,23 +573,11 @@ p{
 .max-w-\[345px\]{
   max-width: 345px;
 }
-.max-w-\[639px\]{
-  max-width: 639px;
-}
-.max-w-\[487px\]{
-  max-width: 487px;
-}
-.max-w-\[3425px\]{
-  max-width: 3425px;
-}
-.max-w-full{
-  max-width: 100%;
-}
-.max-w-sm{
-  max-width: 24rem;
-}
 .max-w-screen-sm{
   max-width: 640px;
+}
+.max-w-\[868px\]{
+  max-width: 868px;
 }
 .grow{
   flex-grow: 1;
@@ -614,9 +599,6 @@ p{
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.whitespace-nowrap{
-  white-space: nowrap;
-}
 .rounded{
   border-radius: 0.25rem;
 }
@@ -633,10 +615,6 @@ p{
 .bg-center{
   background-position: center;
 }
-.px-3{
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
 .text-center{
   text-align: center;
 }
@@ -646,20 +624,23 @@ p{
 .font-cardo{
   font-family: Cardo, sans-serif;
 }
+.font-archivoRegular{
+  font-family: Archivo, sans-serif;
+}
 .text-6xl{
   font-size: 4rem;
 }
 .text-tiny{
   font-size: .875rem;
 }
-.text-5xl{
-  font-size: 3rem;
+.text-4xl{
+  font-size: 2.25rem;
 }
 .text-xl{
   font-size: 1.25rem;
 }
-.text-4xl{
-  font-size: 2.25rem;
+.text-base{
+  font-size: 1rem;
 }
 .uppercase{
   text-transform: uppercase;
@@ -681,23 +662,31 @@ p{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+.opacity-50{
+  opacity: 0.5;
+}
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
-
+.underline-border{
+  position: relative;
+}
+.underline-border::before{
+  position: absolute;
+  right: 50%;
+  top: 2.5rem;
+  width: 2.5rem;
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  --tw-content: '';
+  content: var(--tw-content);
+}
 .custom-header > h3{
   margin-bottom: 1.5rem;
   font-size: 1.25rem;
-}
-
-.before\:absolute::before{
-  content: var(--tw-content);
-  position: absolute;
-}
-
-.before\:right-2\/4::before{
-  content: var(--tw-content);
-  right: 50%;
 }
 
 .before\:-top-8::before{
@@ -705,106 +694,32 @@ p{
   top: -2rem;
 }
 
-.before\:top-10::before{
-  content: var(--tw-content);
-  top: 2.5rem;
-}
-
-.before\:w-10::before{
-  content: var(--tw-content);
-  width: 2.5rem;
-}
-
-.before\:translate-x-1\/2::before{
-  content: var(--tw-content);
-  --tw-translate-x: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.before\:border-t::before{
-  content: var(--tw-content);
-  border-top-width: 1px;
-}
-
-.before\:border-black::before{
+.before\:border-white::before{
   content: var(--tw-content);
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
-
-.before\:content-\[\'\'\]::before{
-  --tw-content: '';
-  content: var(--tw-content);
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 @media (min-width: 640px){
-
-  .sm\:container{
-    width: 100%;
-  }
-
-  @media (min-width: 640px){
-
-    .sm\:container{
-      max-width: 640px;
-    }
-  }
-
-  @media (min-width: 768px){
-
-    .sm\:container{
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: 1024px){
-
-    .sm\:container{
-      max-width: 1024px;
-    }
-  }
-
-  @media (min-width: 1280px){
-
-    .sm\:container{
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px){
-
-    .sm\:container{
-      max-width: 1536px;
-    }
-  }
 
   .sm\:mx-auto{
     margin-left: auto;
     margin-right: auto;
   }
 
-  .sm\:max-w-\[345px\]{
-    max-width: 345px;
-  }
-
-  .sm\:max-w-\[700px\]{
-    max-width: 700px;
+  .sm\:w-auto{
+    width: auto;
   }
 
   .sm\:max-w-\[487px\]{
     max-width: 487px;
   }
-
-  .sm\:whitespace-normal{
-    white-space: normal;
-  }
 }
 
 @media (min-width: 768px){
 
-  .md\:mx-auto{
-    margin-left: auto;
-    margin-right: auto;
+  .md\:mb-16{
+    margin-bottom: 4rem;
   }
 
   .md\:flex{
@@ -821,18 +736,6 @@ p{
 
   .md\:w-\[43\%\]{
     width: 43%;
-  }
-
-  .md\:max-w-\[487px\]{
-    max-width: 487px;
-  }
-
-  .md\:max-w-\[345px\]{
-    max-width: 345px;
-  }
-
-  .md\:max-w-\[639px\]{
-    max-width: 639px;
   }
 
   .md\:px-3{

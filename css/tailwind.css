@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -21,6 +22,12 @@
   }
 }
 
-.custom-header > h3 {
-  @apply text-xl mb-6;
+@layer utilities {
+  .underline-border {
+    @apply relative before:content-[''] before:absolute before:w-10  before:border-t before:border-black before:right-2/4 before:translate-x-1/2 before:top-10;
+  }
+
+  .custom-header > h3 {
+    @apply text-xl mb-6;
+  }
 }
