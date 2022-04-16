@@ -1,5 +1,4 @@
 module.exports = {
-  mode: 'jit',
   content: ['**/*.php', '*.php'],
   theme: {
     extend: {
@@ -25,6 +24,9 @@ module.exports = {
       },
       margin: {
         2: '10px'
+      },
+      container: {
+        center: true
       }
     }
   },
