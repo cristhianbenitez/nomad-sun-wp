@@ -139,10 +139,14 @@ function nomad_sun_scripts()
     'all'
   );
   wp_enqueue_script(
-    'nomad-sun-navigation',
-    get_template_directory_uri() . '/js/navigation.js',
-    [],
-    _S_VERSION,
+    'nomad-sun-barba',
+    get_template_directory_uri() . '/js/barba.js',
+
+  );
+  wp_enqueue_script(
+    'nomad-sun-main',
+    get_template_directory_uri() . '/js/main.js',
+    array('jquery'),
     true
   );
 
