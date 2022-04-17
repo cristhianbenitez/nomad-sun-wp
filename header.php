@@ -28,9 +28,9 @@
 		<div id="page" class="barba-container relative">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'nomadsun'); ?></a>
 
-			<header id="masthead" class="site-header absolute top-0 left-0 w-full px-16 pt-10 ">
+			<header id="masthead" class="site-header absolute top-0 left-0 w-full px-6 sm:px-16 pt-10">
 				<nav id="site-navigation" class="main-navigation flex justify-between items-center">
-					<a class="menu-toggle text-sm font-archivo text-white uppercase tracking-widest block w-32">
+					<a class="invisible menu-toggle text-sm font-archivo text-white uppercase tracking-widest sm:visible sm:block w-32">
 						Places
 					</a>
 
